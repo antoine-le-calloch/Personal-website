@@ -1,0 +1,18 @@
+.Home {
+
+}
+
+.Home-desc-image{
+    display: flex;
+    width: 100%;
+}
+
+.Home-desc{
+    padding-top: 10rem;
+    width: 100%;
+    text-align: center;
+}
+
+.Home-image{
+    align-content: start;
+}
