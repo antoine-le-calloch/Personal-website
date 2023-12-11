@@ -1,0 +1,24 @@
+.App-header {
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2rem 3rem 2rem 3rem;
+
+        div{
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                padding: 1rem;
+                border: solid 2px black;
+                border-radius: 2rem;
+
+                &:hover{
+                    transition-duration: 1s;
+                    border-color: white;
+                }
+            }
+        }
+    }
+}
