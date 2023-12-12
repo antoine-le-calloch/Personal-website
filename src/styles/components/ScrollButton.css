@@ -1,0 +1,22 @@
+.ScrollButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    animation: bounce 1s ease infinite;
+
+    button{
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+        padding: 0;
+    }
+}
+
+@keyframes bounce{
+    from {bottom: 10px;}
+    50%  {bottom: 5px;}
+    to   {bottom: 10px;}
+}
+

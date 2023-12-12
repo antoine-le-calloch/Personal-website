@@ -2,7 +2,7 @@
     .links {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         padding: 2rem 3rem 2rem 3rem;
 
         div{
@@ -17,6 +17,17 @@
                 &:hover{
                     transition-duration: 1s;
                     border-color: white;
+                }
+            }
+            .Header-logo{
+                padding: 0;
+                border: none;
+                img{
+                    transition: transform .5s; /* Animation */
+                    width: 70px;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
                 }
             }
         }

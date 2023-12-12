@@ -6,9 +6,12 @@ const Header = () => {
         <header className="App-header">
             <nav className="links">
                 <div>
-                    <Link to="/">Home</Link>
+                    <Link className="Header-logo" to="/">
+                        <img src="/logo_ALC.png" alt="Logo"/>
+                    </Link>
                 </div>
                 <div>
+                    <Link to="/">Home</Link>
                     <Link to="/projects">Projects</Link>
                 </div>
             </nav>

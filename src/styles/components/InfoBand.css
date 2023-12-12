@@ -1,0 +1,36 @@
+.container_infoBand {
+    overflow: hidden;
+
+    .InfoBand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 15rem;
+
+        .band_image {
+            order: 1;
+            img {
+                width: 30vw;
+            }
+        }
+
+        .band_description {
+            text-align: right;
+            p {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .image_on_left {
+        .band_image {
+            order: 0;
+        }
+
+        .band_description {
+            text-align: left;
+        }
+    }
+}
