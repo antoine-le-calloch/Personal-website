@@ -1,7 +1,6 @@
 import '../styles/components/InfoBand.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import {useEffect} from "react";
+import AOS from 'aos';
 
 const InfoBand = (data) => {
     useEffect(() => {

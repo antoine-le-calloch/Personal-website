@@ -1,12 +1,2 @@
 .Home {
-    .Home-desc-image {
-        height: 100vh;
-        width: 100%;
-
-        .Home-desc {
-            padding-top: 10rem;
-            width: 100%;
-            text-align: center;
-        }
-    }
 }
