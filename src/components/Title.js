@@ -16,7 +16,7 @@ const Title = (data) => {
                 <h2>{data.subText}</h2>
             </div>
             <div>
-            <ScrollButton/>
+                <ScrollButton/>
             </div>
         </div>
     );
