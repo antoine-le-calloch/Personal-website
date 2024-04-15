@@ -7,7 +7,7 @@ const Header = () => {
             <nav className="links">
                 <div>
                     <Link className="Header-logo" to="/">
-                        <img src="/logo_ALC.png" alt="Logo"/>
+                        <img src="/logo/logo_ALC.png" alt="Logo ALC"/>
                     </Link>
                 </div>
                 <div>
