@@ -13,7 +13,7 @@ const InfoBand = (data) => {
             <div className={"InfoBand image_on_" + data.imageLocation}
                  data-aos={"fade-" + data.imageLocation}>
                 <div className={'band_image image_on_' + data.imageLocation}>
-                    <img src={data.image} alt="Stephane Hessel high school"/>
+                    <img src={data.image} alt={data.image.split('/').slice(-1)[0]} />
                 </div>
                 <div className="band_description">
                     <h2>{data.diploma ?? ""}</h2>

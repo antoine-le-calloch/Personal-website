@@ -1,4 +1,8 @@
-.App-header {
+.App-header {/*
+    position: fixed;
+    background-color: black;
+    z-index: 1;
+    width: 100%;*/
     .links {
         display: flex;
         align-items: center;
