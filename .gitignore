@@ -9,7 +9,7 @@
 # production
 /build
 
-/protected_assets
+/src/protected_assets
 
 # JetBrains IDE files
 .idea/
