@@ -9,7 +9,8 @@
 # production
 /build
 
-/src/protected_assets
+# folder with the private assets
+/public/protected_assets
 
 # JetBrains IDE files
 .idea/
