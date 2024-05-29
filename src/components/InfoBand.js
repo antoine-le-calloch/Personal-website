@@ -1,8 +1,9 @@
 import '../styles/components/InfoBand.css';
 import {useEffect} from "react";
 import AOS from 'aos';
+import PropTypes from "prop-types";
 
-const InfoBand = (data) => {
+const InfoBand = ({info}) => {
     useEffect(() => {
         AOS.init({
             duration: 2000
@@ -10,20 +11,34 @@ const InfoBand = (data) => {
     }, [])
     return (
         <div className="container_infoBand">
-            <div className={"InfoBand image_on_" + data.imageLocation}
-                 data-aos={"fade-" + data.imageLocation}>
-                <div className={'band_image image_on_' + data.imageLocation}>
-                    <img src={data.image} alt={data.image.split('/').slice(-1)[0]} />
+            <div className={"InfoBand image_on_" + info.imageLocation}
+                 data-aos={"fade-" + info.imageLocation}>
+                <div className={'band_image image_on_' + info.imageLocation}>
+                    <img src={"/protected_assets/images/" + info.image}
+                         alt={info.image} />
                 </div>
                 <div className="band_description">
-                    <h2>{data.diploma ?? ""}</h2>
-                    <p>{data.speciality ?? ""}</p><br/>
-                    <em>{data.location ?? ""}</em><br/>
-                    <em>{data.date ?? ""}</em>
+                    <h2>{info.diploma ?? ""}</h2>
+                    <p>{info.speciality ?? ""}</p><br/>
+                    <em>{info.location ?? ""}</em><br/>
+                    <em>{info.date ?? ""}</em>
                 </div>
             </div>
         </div>
     );
+};
+
+InfoBand.propTypes = {
+    data: PropTypes.shape({
+        info: PropTypes.shape({
+            image: PropTypes.string,
+            imageLocation: PropTypes.string,
+            diploma: PropTypes.string,
+            speciality: PropTypes.string,
+            location: PropTypes.string,
+            date: PropTypes.string,
+        }),
+    }),
 };
 
 export default InfoBand;

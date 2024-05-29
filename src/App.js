@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Header from './parts/Header';
-import Experiences from "./pages/Experiences";
-import Education from "./pages/Education";
 import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
 
 function App() {
