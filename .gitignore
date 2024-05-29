@@ -9,7 +9,7 @@
 # production
 /build
 
-/personal_data
+/protected_assets
 
 # JetBrains IDE files
 .idea/
