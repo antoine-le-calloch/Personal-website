@@ -9,6 +9,8 @@
 # production
 /build
 
+/personal_data
+
 # JetBrains IDE files
 .idea/
 
