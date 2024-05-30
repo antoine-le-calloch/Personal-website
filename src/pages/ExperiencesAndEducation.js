@@ -1,6 +1,7 @@
 import Title from "../components/Title";
 import InfoBand from "../components/InfoBand";
 import {useEffect, useState} from "react";
+import '../styles/pages/ExperiencesAndEducation.css';
 
 const ExperiencesAndEducation = () => {
     const [experiences, setExperiences] = useState([]);
@@ -18,20 +19,23 @@ const ExperiencesAndEducation = () => {
             .catch(error => console.error(error));
     }, []);
 
+    const infoBands = [...experiences, ...education]
+    infoBands.sort((a, b) => {
+        return new Date(b.start) - new Date(a.start);
+    });
+
     return (
-        <div>
+        <div className="experiencesAndEducation">
             <div>
                 <Title {...{
                     text: "Experience and education",
                     subText: "My professional and academic background"
                 }} />
             </div>
-            <div>
-                {experiences.map((experience) => (
-                    <InfoBand key={experience.diploma} info={experience} />
-                ))}
-                {education.map((education) => (
-                    <InfoBand key={education.diploma} info={education}/>
+            <div className="infoBands">
+                <span data-aos="fade-in" className="timeline"></span>
+                {infoBands.map((infoBand, index) => (
+                    <InfoBand key={infoBand.diploma} info={infoBand} direction={index%2?"right":"left"}/>
                 ))}
             </div>
         </div>
