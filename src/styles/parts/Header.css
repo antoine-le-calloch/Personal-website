@@ -1,37 +1,36 @@
-.App-header {/*
+.App-header {
     position: fixed;
-    background-color: black;
+    background: linear-gradient(var(--blue), transparent);
     z-index: 1;
-    width: 100%;*/
+    width: 100%;
     .links {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 2rem 3rem 2rem 3rem;
-
         div{
+            .Header-logo{
+                padding: 0;
+                border: none;
+                img{
+                    transition: transform .5s;
+                    width: 70px;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
             a{
                 color: white;
                 text-decoration: none;
                 font-size: 1rem;
                 padding: 1rem;
-                border: solid 2px black;
+                border: solid 2px transparent;
                 border-radius: 2rem;
 
                 &:hover{
                     transition-duration: 1s;
                     border-color: white;
-                }
-            }
-            .Header-logo{
-                padding: 0;
-                border: none;
-                img{
-                    transition: transform .5s; /* Animation */
-                    width: 70px;
-                    &:hover{
-                        transform: scale(1.1);
-                    }
                 }
             }
         }
