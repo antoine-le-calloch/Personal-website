@@ -5,7 +5,6 @@
         justify-content: right;
         align-items: center;
         gap: 2rem;
-        margin-bottom: 15rem;
         width: 48%;
 
         .band_description {
@@ -13,7 +12,7 @@
             text-align: right;
             p {
                 margin: 0;
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
         .band_image {
@@ -27,16 +26,6 @@
             position: relative;
             font-weight: bold;
             white-space: nowrap;
-            &:before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: -35px;
-                width: 30px;
-                height: 2px;
-                background-color: var(--light-blue);
-                transform: translateY(-50%);
-            }
         }
     }
 

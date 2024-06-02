@@ -1,14 +1,15 @@
 .experiencesAndEducation{
     .infoBands{
         position: relative;
+        width: 100%;
         .timeline{
             position: absolute;
+            width: 6px;
+            height: 100%;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 4px;
-            height: 99%;
-            background-color: var(--light-blue);
+            background-color: var(--blue);
             &:before{
                 content: '';
                 position: absolute;
@@ -17,17 +18,25 @@
                 transform: translateX(-50%);
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
-                border-bottom: 20px solid var(--light-blue);
+                border-bottom: 20px solid var(--blue);
             }
-            &:after{
+        }
+        .infoBand{
+            position: relative;
+            margin-top: 5rem;
+            &:before{
                 content: '';
                 position: absolute;
-                bottom: 0;
+                top: 50%;
+                right: 50%;
+                transform: translate(0, -50%);
+                background-color: var(--blue);
+                width: 20px;
+                height: 2px;
+            }
+            &.band_right:before{
+                right: auto;
                 left: 50%;
-                transform: translateX(-50%);
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-bottom: 20px solid var(--light-blue);
             }
         }
     }

@@ -32,10 +32,13 @@ const ExperiencesAndEducation = () => {
                     subText: "My professional and academic background"
                 }} />
             </div>
-            <div className="infoBands">
-                <span data-aos="fade-in" className="timeline"></span>
+            <div className="infoBands" data-aos="fade-in">
+                <span className="arrow"></span>
+                <span className="timeline"></span>
                 {infoBands.map((infoBand, index) => (
-                    <InfoBand key={infoBand.diploma} info={infoBand} direction={index%2?"right":"left"}/>
+                    <div className={"infoBand band_" + (index % 2 ? "right" : "left")}>
+                        <InfoBand key={infoBand.title} info={infoBand} direction={index % 2 ? "right" : "left"}/>
+                    </div>
                 ))}
             </div>
         </div>
