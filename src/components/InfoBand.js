@@ -2,6 +2,7 @@ import '../styles/components/InfoBand.css';
 import {useEffect} from "react";
 import AOS from 'aos';
 import PropTypes from "prop-types";
+import parse from 'html-react-parser';
 
 const getLeftOrRight = (left) => {
     return left ? "right":"left";
@@ -21,7 +22,7 @@ const InfoBand = ({data, position}) => {
             <div className="band-first-half" data-aos={"fade-" + getLeftOrRight(!position)}>
                 <div className="info">
                     <h2>{data.title}</h2>
-                    <p>{data.description}</p><br/>
+                    <p>{parse(data.description)}</p><br/>
                     <em>{start.toLocaleDateString('en-GB', options) + " - " + end.toLocaleDateString('en-GB', options)}</em><br/>
                     <em>{data.institution}</em><br/>
                     <em>{data.location}</em>
