@@ -16,6 +16,14 @@
                 margin: 0;
                 font-size: 1rem;
             }
+            a{
+                color: rgba(15, 78, 142, 0.71);
+                transition: color 0.3s;
+                text-decoration: none;
+                &:hover {
+                    color: var(--light-blue);
+                }
+            }
         }
         .date {
             order: 1;
