@@ -10,8 +10,8 @@ const Title = (data) => {
         });
     }, [])
     return (
-        <div className="Title">
-            <div className="Title-text" data-aos="fade-in">
+        <div className="title">
+            <div className="title-text" data-aos="fade-in">
                 <h1>{data.text}</h1>
                 <h2>{data.subText}</h2>
             </div>

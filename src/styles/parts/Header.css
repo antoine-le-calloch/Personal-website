@@ -1,4 +1,4 @@
-.App-header {
+.header {
     position: fixed;
     background: linear-gradient(var(--blue), transparent);
     z-index: 1;
@@ -9,7 +9,7 @@
         justify-content: space-between;
         padding: 2rem 3rem 2rem 3rem;
         div{
-            .Header-logo{
+            .header-logo{
                 padding: 0;
                 border: none;
                 img{

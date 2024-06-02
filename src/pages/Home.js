@@ -10,7 +10,7 @@ const Home = () => {
         });
     }, [])
     return (
-        <div className="Home">
+        <div className="home">
             <Title {...{
                 text: "Antoine Le Calloch",
                 subText: "Personal Website"

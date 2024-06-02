@@ -3,10 +3,10 @@ import '../styles/parts/Header.css';
 
 const Header = () => {
     return (
-        <header className="App-header">
+        <header className="header">
             <nav className="links">
                 <div>
-                    <Link className="Header-logo" to="/">
+                    <Link className="header-logo" to="/">
                         <img src="/logo/logo_ALC.png" alt="Logo ALC"/>
                     </Link>
                 </div>

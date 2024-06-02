@@ -1,9 +1,9 @@
-.Title {
+.title {
     width: 100%;
     display: flex;
     justify-content: center;
 
-    .Title-text {
+    .title-text {
         padding: 15rem 0 10rem 0;
         text-align: center;
     }

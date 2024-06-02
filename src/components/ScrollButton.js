@@ -5,14 +5,14 @@ import '../styles/components/ScrollButton.css';
 const ScrollButton = () => {
         const [infoBandExists, setInfoBandExists] = useState(false);
         useEffect(() => {
-            const infoBandElement = document.querySelector(".container_infoBand");
+            const infoBandElement = document.querySelector(".info-band");
             if (infoBandElement) {
                 setInfoBandExists(true)
             }
         }, []);
 
         const goToBot = () => {
-            const firstInfoBand = document.getElementsByClassName('container_infoBand')[0];
+            const firstInfoBand = document.getElementsByClassName('info-band')[0];
             firstInfoBand.scrollIntoView({
                 block: "end",
                 behavior: "smooth"
@@ -20,7 +20,7 @@ const ScrollButton = () => {
         };
         if (infoBandExists) {
             return (
-                <div className="ScrollButton">
+                <div className="scroll-button">
                     <button onClick={goToBot}>
                         <FaArrowCircleDown
                             className="icon-position icon-style"/>
