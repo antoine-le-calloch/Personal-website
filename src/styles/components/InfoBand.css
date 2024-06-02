@@ -1,13 +1,15 @@
-.container_infoBand {
+.info-band {
     overflow: hidden;
-    .InfoBand {
+    display: flex;
+    .band-first-half {
         display: flex;
         justify-content: right;
         align-items: center;
         gap: 2rem;
         width: 48%;
+        order: 0;
 
-        .band_description {
+        .info {
             order: 0;
             text-align: right;
             p {
@@ -15,30 +17,36 @@
                 font-size: 1rem;
             }
         }
-        .band_image {
+        .date {
             order: 1;
-            img {
-                width: 150px;
-            }
-        }
-        .band_date {
-            order: 2;
             position: relative;
             font-weight: bold;
             white-space: nowrap;
         }
     }
 
-    &.info_on_right {
+    .band-second-half {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+        img {
+            width: 150px;
+        }
+    }
+
+    &.info-on-right {
         display: flex;
         justify-content: right;
-        .InfoBand {
+        .band-first-half {
+            order: 2;
             justify-content: left;
-            .band_description {
-                order: 2;
+            .info {
+                order: 1;
                 text-align: left;
             }
-            .band_date {
+            .date {
                 order: 0;
                 &:before {
                     left: -35px;

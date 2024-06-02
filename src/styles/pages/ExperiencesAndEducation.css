@@ -1,5 +1,5 @@
-.experiencesAndEducation{
-    .infoBands{
+.experiences-and-education{
+    .items{
         position: relative;
         width: 100%;
         .timeline{
@@ -21,7 +21,7 @@
                 border-bottom: 20px solid var(--blue);
             }
         }
-        .infoBand{
+        .item{
             position: relative;
             margin-top: 5rem;
             &:before{
@@ -34,10 +34,10 @@
                 width: 20px;
                 height: 2px;
             }
-            &.band_right:before{
-                right: auto;
-                left: 50%;
-            }
+        }
+        .right:before{
+            right: auto;
+            left: 50%;
         }
     }
 }

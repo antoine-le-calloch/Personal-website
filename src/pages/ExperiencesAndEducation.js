@@ -19,27 +19,27 @@ const ExperiencesAndEducation = () => {
             .catch(error => console.error(error));
     }, []);
 
-    const infoBands = [...experiences, ...education]
-    infoBands.sort((a, b) => {
+    const items = [...experiences, ...education]
+    items.sort((a, b) => {
         return new Date(b.start) - new Date(a.start);
     });
-
     return (
-        <div className="experiencesAndEducation">
+        <div className="experiences-and-education">
             <div>
                 <Title {...{
                     text: "Experience and education",
                     subText: "My professional and academic background"
                 }} />
             </div>
-            <div className="infoBands" data-aos="fade-in">
+            <div className="items" data-aos="fade-in">
                 <span className="arrow"></span>
                 <span className="timeline"></span>
-                {infoBands.map((infoBand, index) => (
-                    <div className={"infoBand band_" + (index % 2 ? "right" : "left")}>
-                        <InfoBand key={infoBand.title} info={infoBand} direction={index % 2 ? "right" : "left"}/>
-                    </div>
-                ))}
+                {items.map((item, index) => {
+                    return (
+                        <div className={"item " + (index % 2 ? "right":"")}>
+                            <InfoBand key={item.title} data={item} position={index % 2}/>
+                        </div>
+                    )})}
             </div>
         </div>
     );
