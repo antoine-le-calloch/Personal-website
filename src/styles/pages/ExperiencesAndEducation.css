@@ -1,4 +1,5 @@
 .experiences-and-education{
+    padding-bottom: 4rem;
     .items{
         position: relative;
         width: 100%;
@@ -23,7 +24,7 @@
         }
         .item{
             position: relative;
-            margin-top: 5rem;
+            margin-top: 8rem;
             &:before{
                 content: '';
                 position: absolute;
