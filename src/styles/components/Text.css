@@ -3,7 +3,13 @@
     display: flex;
     justify-content: center;
     span{
-        width: 50%;
         text-align: center;
+        width: 50%;
+        @media (max-width: 1000px) {
+            width: 70%;
+        }
+        @media (max-width: 650px) {
+            width: 100%;
+        }
     }
 }

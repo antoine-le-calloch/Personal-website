@@ -7,7 +7,10 @@
 
         .certification {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
 
             .image {
                 display: flex;
@@ -26,32 +29,35 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                max-width: 800px;
+                max-width: 900px;
                 text-align: center;
                 row-gap: 0.5rem;
 
                 a {
                     position: relative;
-                    font-size: 1.8rem;
+                    font-size: 1.5rem;
                     font-weight: normal;
                     color: var(--blue);
                     text-decoration: none;
                     transition: text-decoration 0.3s;
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        bottom: -1px;
-                        height: 2px;
-                        width: 0;
-                        background: var(--blue);
-                        transition: transform 0.8s, width 0.8s;
-                        transform-origin: center;
-                    }
+                    @media (min-width: 650px) {
+                        font-size: 1.8rem;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -1px;
+                            height: 2px;
+                            width: 0;
+                            background: var(--blue);
+                            transition: transform 0.8s, width 0.8s;
+                            transform-origin: center;
+                        }
 
-                    &:hover::after {
-                        width: 100%;
+                        &:hover::after {
+                            width: 100%;
+                        }
                     }
                 }
                 em{

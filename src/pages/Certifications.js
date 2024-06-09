@@ -32,8 +32,8 @@ const Certifications = () => {
                                 <a href={item.link} target="_blank" rel="noreferrer">
                                     {item.title}
                                 </a>
-                                <div>{parse(item.description)}</div>
-                                <em>{item.date}</em><br/>
+                                <span>{parse(item.description)}</span>
+                                <em>{item.date}</em>
                             </div>
                         </div>
                     )

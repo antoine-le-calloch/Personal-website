@@ -28,7 +28,6 @@
                 padding: 1rem;
                 border: solid 2px transparent;
                 border-radius: 2rem;
-
                 &:hover{
                     transition-duration: 1s;
                     border-color: white;
