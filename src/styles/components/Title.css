@@ -8,5 +8,11 @@
     text-align: center;
     span{
         width: 45%;
+        @media (max-width: 1000px) {
+            width: 70%;
+        }
+        @media (max-width: 650px) {
+            width: 100%;
+        }
     }
 }
