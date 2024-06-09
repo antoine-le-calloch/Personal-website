@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    h2{
-        width: 40%;
+    span{
+        width: 45%;
     }
 }
