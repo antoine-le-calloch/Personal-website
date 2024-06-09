@@ -22,7 +22,7 @@ const Certifications = () => {
             <div className="certifications-list">
                 {(certifications.items).map((item) => {
                     return (
-                        <div key={item.title} className="certification">
+                        <div key={item.title} className="certification scrollable">
                             <div className="image" data-aos="fade-right">
                                 <a href={item.link} target="_blank" rel="noreferrer">
                                     <img src={"/protected_assets/images/" + item.image} alt={item.image}/>

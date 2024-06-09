@@ -4,7 +4,7 @@ import '../../styles/components/ScrollButton.css';
 
 const ScrollButton = () => {
     const [isVisible, setIsVisible] = useState(true);
-    const infoBands = document.getElementsByClassName("info-band");
+    const scrollableItems = document.getElementsByClassName("scrollable");
 
     useEffect(() => {
         const handleScroll = () => {setIsVisible(window.scrollY === 0);};
@@ -12,9 +12,9 @@ const ScrollButton = () => {
         return () => {window.removeEventListener('scroll', handleScroll);};
     }, []);
 
-    return infoBands.length > 0 && isVisible ? (
+    return scrollableItems.length > 0 && isVisible ? (
         <div className="scroll-button">
-            <button onClick={() => infoBands[0].scrollIntoView({block: "center", behavior: "smooth"})}>
+            <button onClick={() => scrollableItems[0].scrollIntoView({block: "center", behavior: "smooth"})}>
                 <FaArrowCircleDown
                     className="icon-position icon-style"/>
             </button>

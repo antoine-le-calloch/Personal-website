@@ -11,7 +11,7 @@ const InfoBand = ({data, position}) => {
     const start = new Date(data.start);
     const end = new Date(data.end);
     return (
-        <div className={"info-band info-on-" + getLeftOrRight(position)}>
+        <div className={"scrollable info-band info-on-" + getLeftOrRight(position)}>
             <div className="band-first-half" data-aos={"fade-" + getLeftOrRight(!position)}>
                 <div className="info">
                     <h2>{data.title}</h2>
