@@ -2,6 +2,7 @@
     position: absolute;
     bottom: 10px;
     left: 50%;
+    transform: translateX(-50%);
     animation: bounce 1s ease infinite;
 
     button{
@@ -9,7 +10,7 @@
         font-size: 2rem;
         background: none;
         border: none;
-        color: white;
+        color: var(--blue);
         padding: 0;
     }
 }
