@@ -1,5 +1,4 @@
 import '../styles/pages/Home.css';
-import Title from "../components/Title";
 import {useEffect, useState} from "react";
 import Text from "../components/Text";
 
@@ -13,8 +12,8 @@ const Home = () => {
     }, []);
     return (
         <div className="home">
-            <Title title={"Antoine Le Calloch"} subtitle={"Personal Website"}/>
-            <Text text={introduction.text} />
+            <h1>{introduction.title}</h1>
+            <Text text={introduction.text}/>
         </div>
     );
 };
