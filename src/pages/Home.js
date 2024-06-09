@@ -1,6 +1,6 @@
 import '../styles/pages/Home.css';
 import {useEffect, useState} from "react";
-import Text from "../components/Text";
+import Text from "../components/generic/Text";
 
 const Home = () => {
     const [introduction, setIntroduction] = useState([]);

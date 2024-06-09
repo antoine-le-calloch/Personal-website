@@ -1,4 +1,4 @@
-import '../styles/components/Title.css';
+import '../../styles/components/Title.css';
 import ScrollButton from "./ScrollButton";
 
 const Title = ({title, subtitle}) => {

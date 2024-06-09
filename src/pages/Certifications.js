@@ -1,4 +1,4 @@
-import Title from "../components/Title";
+import Title from "../components/generic/Title";
 import {useEffect, useState} from "react";
 
 const Certifications = () => {
