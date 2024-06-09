@@ -18,10 +18,25 @@
             }
             a{
                 color: rgba(15, 78, 142, 0.71);
-                transition: color 0.3s;
                 text-decoration: none;
-                &:hover {
-                    color: var(--light-blue);
+                position: relative;
+                white-space: nowrap;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -1px;
+                    height: 1px;
+                    width: 0;
+                    background: rgba(15, 78, 142, 0.71);
+                    transition: transform 0.8s, width 0.8s;
+                    transform-origin: center;
+                }
+
+                &:hover::after {
+                    width: 100%;
                 }
             }
         }

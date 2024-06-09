@@ -1,6 +1,10 @@
 .experiences-and-education{
     .items{
         position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 8rem;
         width: 100%;
         .timeline{
             position: absolute;
@@ -23,7 +27,6 @@
         }
         .item{
             position: relative;
-            margin-top: 8rem;
             &:before{
                 content: '';
                 position: absolute;
