@@ -1,6 +1,4 @@
 import '../styles/components/InfoBand.css';
-import {useEffect} from "react";
-import AOS from 'aos';
 import PropTypes from "prop-types";
 import parse from 'html-react-parser';
 
@@ -9,11 +7,6 @@ const getLeftOrRight = (left) => {
 }
 
 const InfoBand = ({data, position}) => {
-    useEffect(() => {
-        AOS.init({
-            duration: 2000
-        });
-    }, [])
     let options = { day: 'numeric', month: 'long', year: 'numeric' };
     const start = new Date(data.start);
     const end = new Date(data.end);

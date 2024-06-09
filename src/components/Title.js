@@ -1,9 +1,8 @@
 import AOS from 'aos';
 import '../styles/components/Title.css';
-import ScrollButton from "../components/ScrollButton";
 import {useEffect} from "react";
 
-const Title = (data) => {
+const Title = ({title, subtitle}) => {
     useEffect(() => {
         AOS.init({
             duration: 2000
@@ -11,13 +10,13 @@ const Title = (data) => {
     }, [])
     return (
         <div className="title">
-            <div className="title-text" data-aos="fade-in">
-                <h1>{data.text}</h1>
-                <h2>{data.subText}</h2>
+            <div className="title-subtitle" data-aos="fade-in">
+                <h1>{title}</h1>
+                <h2>{subtitle}</h2>
             </div>
-            <div>
+{/*            <div>
                 <ScrollButton/>
-            </div>
+            </div>*/}
         </div>
     );
 };
