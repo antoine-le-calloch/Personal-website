@@ -6,6 +6,7 @@ import Header from './parts/Header';
 import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
 import './App.css';
 import AOS from 'aos';
+import Certifications from "./pages/Certifications";
 
 function App() {
     useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/experiences-and-education" element={<ExperiencesAndEducation/>}/>
+                    <Route path="/certifications" element={<Certifications/>}/>
                     <Route path="/projects" element={<Projects/>}/>
                 </Routes>
             </div>
