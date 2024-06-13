@@ -42,8 +42,4 @@ const Certifications = () => {
     );
 };
 
-Certifications.propTypes = {
-    certifications: PropTypes.object.isRequired
-};
-
 export default Certifications;
