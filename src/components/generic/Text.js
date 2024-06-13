@@ -1,5 +1,4 @@
 import '../../styles/components/Text.css';
-import PropTypes from "prop-types";
 
 const Text = ({text}) => {
     return (
@@ -9,10 +8,6 @@ const Text = ({text}) => {
             </span>
         </div>
     );
-};
-
-Text.propTypes = {
-    text: PropTypes.string.isRequired
 };
 
 export default Text;
