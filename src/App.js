@@ -4,9 +4,9 @@ import Header from './parts/Header';
 import Home from './pages/Home';
 import Certifications from "./pages/Certifications";
 import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
-import Projects from './pages/Projects';
 import AOS from 'aos';
 import './App.css';
+import Footer from "./parts/Footer";
 
 function App() {
     useEffect(() => {
@@ -22,9 +22,9 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/experiences-and-education" element={<ExperiencesAndEducation/>}/>
                     <Route path="/certifications" element={<Certifications/>}/>
-                    <Route path="/projects" element={<Projects/>}/>
                 </Routes>
             </div>
+            <Footer />
         </Router>
     );
 }
