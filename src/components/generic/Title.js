@@ -1,5 +1,6 @@
 import '../../styles/components/Title.css';
 import ScrollButton from "./ScrollButton";
+import PropTypes from "prop-types";
 
 const Title = ({title, subtitle}) => {
     return (
@@ -9,6 +10,11 @@ const Title = ({title, subtitle}) => {
             <ScrollButton/>
         </div>
     );
+};
+
+Title.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired
 };
 
 export default Title;

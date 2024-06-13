@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import parse from "html-react-parser";
 import Title from "../components/generic/Title";
+import PropTypes from "prop-types";
 import '../styles/pages/Certifications.css';
 
 const Certifications = () => {
@@ -10,8 +11,6 @@ const Certifications = () => {
             .then(response => response.json())
             .then(data => setCertifications(data))
     }, []);
-
-    console.log(certifications);
 
     return certifications && (
         <div className="certifications">
@@ -41,6 +40,10 @@ const Certifications = () => {
             </div>
         </div>
     );
+};
+
+Certifications.propTypes = {
+    certifications: PropTypes.object.isRequired
 };
 
 export default Certifications;
