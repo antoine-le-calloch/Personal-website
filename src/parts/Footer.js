@@ -1,29 +1,37 @@
-import '../styles/parts/Footer.css';
+import {useEffect, useState} from "react";
 import {BsLinkedin, BsGithub} from "react-icons/bs";
+import '../styles/parts/Footer.css';
+
 
 const Footer = () => {
+    const [contact, setContact] = useState(false);
+    const year = new Date().getFullYear();
+    useEffect(() => {
+        fetch('/protected_assets/data/contact.json')
+            .then(response => response.json())
+            .then(data => setContact(data))
+    }, []);
     return (
         <footer className="footer">
             <div className="top-footer">
-                <div className="sites">
+                <div className="websites">
                     <span className="line"></span>
-                    <a href="https://www.linkedin.com/in/antoine-le-calloch" target="_blank" rel="noreferrer">
+                    <a href={contact.linkedin} target="_blank" rel="noreferrer">
                         <BsLinkedin/>
                     </a>
-                    <a href="https://github.com/antoine-le-calloch" target="_blank" rel="noreferrer">
+                    <a href={contact.github} target="_blank" rel="noreferrer">
                         <BsGithub/>
                     </a>
                     <span className="line"></span>
                 </div>
-                <div className="infos">
-                    <a href="mailto:email">Email</a>
-                </div>
             </div>
 
             <div className="bottom-footer">
+                <a href={"mailto:" + contact.email}><i>{contact.email}</i></a>
                 <div>
-                    © 2024 - All rights reserved. Developed by Antoine Le Calloch.
+                    © {year} - All rights reserved. Developed by Antoine Le Calloch.
                 </div>
+                <div><i>{contact.phone}</i></div>
             </div>
         </footer>
     );
