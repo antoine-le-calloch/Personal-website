@@ -1,13 +1,13 @@
 .footer {
     background: linear-gradient(var(--blue), black);
-    padding: 1rem;
+    padding: 1.5rem;
 
     .top-footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         .websites{
             width: 100%;
             display: flex;
