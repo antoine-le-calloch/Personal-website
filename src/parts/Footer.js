@@ -1,37 +1,58 @@
 import {useEffect, useState} from "react";
-import {BsLinkedin, BsGithub} from "react-icons/bs";
+import {BsLinkedin, BsGithub, BsEnvelope, BsTelephoneFill} from "react-icons/bs";
 import '../styles/parts/Footer.css';
 
 
 const Footer = () => {
-    const [contact, setContact] = useState(false);
+    const [contact, setContact] = useState(null);
+    const [phone, setPhone] = useState(false);
+    const [email, setEmail] = useState(false);
     const year = new Date().getFullYear();
     useEffect(() => {
         fetch('/protected_assets/data/contact.json')
             .then(response => response.json())
             .then(data => setContact(data))
     }, []);
-    return (
+    return (contact &&
         <footer className="footer">
             <div className="top-footer">
                 <div className="websites">
                     <span className="line"></span>
-                    <a href={contact.linkedin} target="_blank" rel="noreferrer">
+                    <a className="link" href={contact.linkedin} target="_blank" rel="noreferrer">
                         <BsLinkedin/>
                     </a>
-                    <a href={contact.github} target="_blank" rel="noreferrer">
+                    <a className="link" href={contact.github} target="_blank" rel="noreferrer">
                         <BsGithub/>
                     </a>
+
+                    <div className="contact-link">
+                        {email && (
+                            <a className="contact" href={"mailto:" + contact.email}>
+                                {contact.email}
+                            </a>
+                        )}
+                        <div className="link" onClick={() => setEmail(!email)}>
+                            <BsEnvelope/>
+                        </div>
+                    </div>
+
+                    <div className="contact-link">
+                        {phone && (
+                            <span className="contact">
+                            {contact.phone}
+                        </span>
+                        )}
+                        <div className="link" onClick={() => setPhone(!phone)}>
+                            <BsTelephoneFill/>
+                        </div>
+                    </div>
                     <span className="line"></span>
                 </div>
             </div>
-
             <div className="bottom-footer">
-                <a href={"mailto:" + contact.email}><i>{contact.email}</i></a>
                 <div>
                     © {year} - All rights reserved. Developed by Antoine Le Calloch.
                 </div>
-                <div><i>{contact.phone}</i></div>
             </div>
         </footer>
     );
