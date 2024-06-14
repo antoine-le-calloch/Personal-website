@@ -24,8 +24,8 @@ const ExperiencesAndEducation = () => {
     return (
         <div className="experiences-and-education">
             <div>
-                <Title title={"Experience and education"}
-                       subtitle={"My professional and academic background"} />
+                <Title title="Experience and education"
+                       subtitle="My professional and academic background" />
             </div>
             <div className="items" data-aos="fade-in">
                 <span className="arrow"></span>
