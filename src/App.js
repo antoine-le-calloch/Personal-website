@@ -1,12 +1,11 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './parts/Header';
+import Footer from "./parts/Footer";
 import Home from './pages/Home';
 import Certifications from "./pages/Certifications";
 import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
 import AOS from 'aos';
-import './App.css';
-import Footer from "./parts/Footer";
 
 function App() {
     useEffect(() => {
