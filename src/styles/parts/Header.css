@@ -49,6 +49,7 @@
                     }
                 }
                 .react-switch-handle {
+                    background-color: var(--primary) !important;
                     transition-duration: 2s !important;
                 }
             }
