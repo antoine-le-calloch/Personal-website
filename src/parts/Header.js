@@ -1,13 +1,14 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import Switch from "react-switch";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import '../styles/parts/Header.css';
 
 const Header = () => {
     const [checked, setChecked] = useState(false);
+    const root = document.documentElement;
     const handleSwitch = (state) => {
         setChecked(state);
-        const root = document.documentElement;
         if (state) {
             root.classList.add('dark');
         } else {
@@ -16,17 +17,18 @@ const Header = () => {
     };
     return (
         <header className="header">
-            <nav className="links">
-                <div>
-                    <Link className="header-logo" to="/">
+            <nav>
+                <Link className="logo" to="/">
                         <img src="/logo/logo_ALC.png" alt="Logo ALC"/>
-                    </Link>
-                </div>
-                <div>
+                </Link>
+                <div className="menu">
                     <Link to="/">Home</Link>
                     <Link to="/experiences-and-education">Experiences / Education</Link>
                     <Link to="/certifications">Certifications</Link>
-                    <Switch checked={checked} onChange={state => handleSwitch(state)} />
+                    {/* use css var primary color */}
+                    <Switch className="switch" checked={checked} onChange={state => handleSwitch(state)}
+                            uncheckedIcon={<BsFillSunFill />}
+                            checkedIcon={<BsFillMoonStarsFill/>}/>
                 </div>
             </nav>
         </header>

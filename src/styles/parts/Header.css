@@ -1,38 +1,61 @@
 .header {
     position: fixed;
     background: linear-gradient(var(--primary), transparent);
-    z-index: 1;
     width: 100%;
-    .links {
+    z-index: 1;
+
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 2rem 3rem 2rem 3rem;
-        div{
-            .header-logo{
-                padding: 0;
-                border: none;
-                img{
-                    transition: transform .5s;
-                    width: 90px;
-                    &:hover{
-                        transform: scale(1.1);
-                    }
-                }
+
+        img {
+            transition: transform .5s;
+            max-width: 90px;
+
+            &:hover {
+                transform: scale(1.1);
             }
-            a{
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            a {
                 color: var(--header);
-                text-decoration: none;
-                font-size: 1rem;
                 font-weight: 500;
                 padding: 1rem;
                 border: solid 2px transparent;
                 border-radius: 2rem;
-                &:hover{
+
+                &:hover {
                     transition-duration: 1s;
                     border-color: var(--header);
                 }
             }
+            .switch {
+                margin-left: 2rem;
+                .react-switch-bg {
+                    transition-duration: 2s !important;
+                    background-color: var(--primary) !important;
+                    div{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            color: var(--secondary) !important;
+                        }
+                    }
+                }
+                .react-switch-handle {
+                    transition-duration: 2s !important;
+                }
+            }
         }
+    }
+
+    a::after {
+        content: none;
     }
 }
