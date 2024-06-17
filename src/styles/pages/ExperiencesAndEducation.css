@@ -37,6 +37,24 @@
                 width: 20px;
                 height: 2px;
             }
+            a{
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    height: 1px;
+                    width: 0;
+                    background: var(--link);
+                    transition: transform 0.8s, width 0.8s;
+                    transform-origin: center;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
         }
         .right:before{
             right: auto;

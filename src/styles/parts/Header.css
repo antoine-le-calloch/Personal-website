@@ -55,8 +55,4 @@
             }
         }
     }
-
-    a::after {
-        content: none;
-    }
 }

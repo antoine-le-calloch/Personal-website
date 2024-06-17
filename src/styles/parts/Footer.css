@@ -27,9 +27,6 @@
                 &:hover{
                     scale: 1.2;
                 }
-                &::after{
-                    content: none;
-                }
             }
             .contact-link{
                 display: flex;
