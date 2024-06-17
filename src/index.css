@@ -1,12 +1,22 @@
 :root {
-  --beige: #e9e7e2;
-  --light-blue: #afc9e2;
-  --blue: #03162a;
+  --primary: #03162a;
+  --secondary: #e9e7e2;
+  --secondary-light: rgba(233, 231, 226, 0.45);
+  --tertiary: black;
+  --header: white;
+}
+
+:root.dark {
+  --primary: #e9e7e2;
+  --secondary: #03162a;
+  --secondary-light: rgba(3, 22, 42, 0.45);
+  --tertiary: white;
+  --header: white;
 }
 
 html{
-  /* Hide scrollbar */
   &::-webkit-scrollbar {
+    /* Hide scrollbar */
     display: none;
   }
   -ms-overflow-style: none;
@@ -14,19 +24,22 @@ html{
 }
 
 body {
-  background-color: var(--beige);
-  color: var(--blue);
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: background 0.5s;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-body{
+  padding: 0 1rem 5rem 1rem;
+  @media (max-width: 650px) {
+    padding: 0 0 2rem 0;
+  }
 }
 
 h1{

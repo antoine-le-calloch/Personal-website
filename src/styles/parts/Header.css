@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    background: linear-gradient(var(--blue), transparent);
+    background: linear-gradient(var(--primary), transparent);
     z-index: 1;
     width: 100%;
     .links {
@@ -21,7 +21,7 @@
                 }
             }
             a{
-                color: white;
+                color: var(--header);
                 text-decoration: none;
                 font-size: 1rem;
                 font-weight: 500;
@@ -30,7 +30,7 @@
                 border-radius: 2rem;
                 &:hover{
                     transition-duration: 1s;
-                    border-color: white;
+                    border-color: var(--header);
                 }
             }
         }

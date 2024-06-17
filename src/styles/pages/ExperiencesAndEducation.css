@@ -13,7 +13,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            background-color: var(--blue);
+            background-color: var(--primary);
             &:before{
                 content: '';
                 position: absolute;
@@ -22,7 +22,7 @@
                 transform: translateX(-50%);
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
-                border-bottom: 20px solid var(--blue);
+                border-bottom: 20px solid var(--primary);
             }
         }
         .item{
@@ -33,7 +33,7 @@
                 top: 50%;
                 right: 50%;
                 transform: translate(0, -50%);
-                background-color: var(--blue);
+                background-color: var(--primary);
                 width: 20px;
                 height: 2px;
             }

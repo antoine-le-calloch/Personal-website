@@ -37,7 +37,7 @@
                     position: relative;
                     font-size: 1.5rem;
                     font-weight: normal;
-                    color: var(--blue);
+                    color: var(--primary);
                     text-decoration: none;
                     transition: text-decoration 0.3s;
                     @media (min-width: 650px) {
@@ -50,7 +50,7 @@
                             bottom: -1px;
                             height: 2px;
                             width: 0;
-                            background: var(--blue);
+                            background: var(--primary);
                             transition: transform 0.8s, width 0.8s;
                             transform-origin: center;
                         }
