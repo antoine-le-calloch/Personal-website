@@ -47,7 +47,10 @@ const Footer = () => {
             </div>
             <div className="bottom-footer">
                 <div>
-                    © {year} - All rights reserved. Developed by Antoine Le Calloch.
+                    © {year} - All rights reserved.
+                </div>
+                <div>
+                    Developed by Antoine Le Calloch.
                 </div>
             </div>
         </footer>
