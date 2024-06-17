@@ -4,6 +4,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 8rem;
+        overflow: hidden;
 
         .certification {
             display: flex;
@@ -52,7 +53,8 @@
                         width: 100%;
                     }
                     @media (max-width: 650px) {
-                        font-size: 1.5rem;
+                        white-space: wrap;
+                        font-size: 1.2rem;
                         &::after{
                             content: none;
                         }
