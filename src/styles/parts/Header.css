@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 2rem 3rem 2rem 3rem;
+        position: relative;
 
         img {
             transition: transform .5s;
@@ -19,9 +20,14 @@
             }
         }
 
+        .open-menu-mobile {
+            display: none;
+        }
+
         .menu {
             display: flex;
             align-items: center;
+
             a {
                 color: var(--header);
                 font-weight: 500;
@@ -34,23 +40,117 @@
                     border-color: var(--header);
                 }
             }
+
             .switch {
                 margin-left: 2rem;
+
                 .react-switch-bg {
                     transition-duration: 2s !important;
                     background-color: var(--secondary) !important;
-                    div{
+
+                    div {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        svg{
+
+                        svg {
                             color: var(--primary) !important;
                         }
                     }
                 }
+
                 .react-switch-handle {
                     background-color: var(--primary) !important;
                     transition-duration: 2s !important;
+                }
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .open-menu-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                position: relative;
+                height: 30px;
+                width: 40px;
+                z-index: 1;
+
+                span {
+                    background-color: var(--header);
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 40px;
+                    transition: background-color 0.2s;
+
+                    &.open {
+                        background-color: transparent;
+
+                        &::before {
+                            background-color: var(--secondary);
+                            transform: translateY(13px) rotate(-45deg);
+                        }
+
+                        &::after {
+                            background-color: var(--secondary);
+                            transform: translateY(-13px) rotate(45deg);
+                        }
+                    }
+
+                    &::before, &::after {
+                        content: '';
+                        background-color: var(--header);
+                        position: absolute;
+                        border-radius: 40px;
+                        width: 100%;
+                        height: 4px;
+                        right: 0;
+                        transition: transform 0.5s, background-color 0.5s;
+                    }
+
+                    &::before {
+                        top: 0;
+                    }
+
+                    &::after {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .menu {
+                background-color: var(--primary);;
+                position: absolute;
+                height: 100vh;
+                visibility: hidden;
+                opacity: 0;
+                right: 0;
+                top: 0;
+                transform: translateX(100%);
+                transition: transform 0.5s, visibility 0.5s, opacity 0.5s,
+                background-color 2s;
+
+                &.open {
+                    transform: translateX(0);
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 1rem;
+
+                a {
+                    color: var(--secondary);
+                }
+
+                .switch {
+                    margin: 1rem 0;
                 }
             }
         }
