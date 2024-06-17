@@ -22,7 +22,6 @@
             }
             .link{
                 color: var(--secondary);
-                text-decoration: none;
                 cursor: pointer;
                 transition: scale 1s;
                 &:hover{
@@ -35,12 +34,21 @@
             .contact-link{
                 display: flex;
                 align-items: center;
+                position: relative;
                 gap: 0.4rem;
                 .contact{
-                    color: var(--secondary);
-                    text-decoration: none;
-                    font-size: 0.8rem;
+                    display: inline-block;
+                    overflow: hidden;
                     white-space: nowrap;
+                    color: var(--secondary);
+                    font-size: 0.8rem;
+                    opacity: 0;
+                    max-width: 0;
+                    transition: max-width 2s, opacity 2s;
+                    &.show{
+                        max-width: 100%;
+                        opacity: 1;
+                    }
                 }
             }
         }

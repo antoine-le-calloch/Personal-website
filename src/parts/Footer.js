@@ -5,8 +5,8 @@ import '../styles/parts/Footer.css';
 
 const Footer = () => {
     const [contact, setContact] = useState(null);
-    const [phone, setPhone] = useState(false);
-    const [email, setEmail] = useState(false);
+    const [showPhone, setShowPhone] = useState(false);
+    const [showEmail, setShowEmail] = useState(false);
     const year = new Date().getFullYear();
     useEffect(() => {
         fetch('/protected_assets/data/contact.json')
@@ -26,23 +26,19 @@ const Footer = () => {
                     </a>
 
                     <div className="contact-link">
-                        {email && (
-                            <a className="contact" href={"mailto:" + contact.email}>
-                                {contact.email}
-                            </a>
-                        )}
-                        <div className="link" onClick={() => setEmail(!email)}>
+                        <a className={"contact" + (showEmail ? " show" : "")} href={"mailto:" + contact.email}>
+                            {contact.email}
+                        </a>
+                        <div className="link" onClick={() => setShowEmail(!showEmail)}>
                             <BsEnvelope/>
                         </div>
                     </div>
 
                     <div className="contact-link">
-                        {phone && (
-                            <span className="contact">
+                        <span className={"contact" + (showPhone ? " show" : "")}>
                             {contact.phone}
                         </span>
-                        )}
-                        <div className="link" onClick={() => setPhone(!phone)}>
+                        <div className="link" onClick={() => setShowPhone(!showPhone)}>
                             <BsTelephoneFill/>
                         </div>
                     </div>
