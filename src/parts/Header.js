@@ -16,8 +16,6 @@ const Header = () => {
             root.classList.remove('dark');
         }
     };
-    const handleMenuMobile = () => {
-    };
     return (
         <header className="header">
             <nav>
