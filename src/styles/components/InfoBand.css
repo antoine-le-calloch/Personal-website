@@ -1,6 +1,11 @@
 .info-band {
     overflow: hidden;
     display: flex;
+    @media (max-width: 1000px) {
+        row-gap: 1rem;
+        flex-direction: column;
+    }
+
     .band-first-half {
         display: flex;
         justify-content: right;
@@ -8,16 +13,47 @@
         gap: 2rem;
         width: 48%;
         order: 0;
+        @media (max-width: 1000px) {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .info {
             order: 0;
             text-align: right;
+            @media (max-width: 1000px) {
+                text-align: center;
+            }
+
+            a {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    height: 1px;
+                    width: 0;
+                    background: var(--link);
+                    transition: transform 0.8s, width 0.8s;
+                    transform-origin: center;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
         }
+
         .date {
             order: 1;
             position: relative;
             font-weight: bold;
             white-space: nowrap;
+            @media (max-width: 1000px) {
+                display: none;
+            }
         }
     }
 
@@ -27,25 +63,37 @@
         justify-content: center;
         align-items: center;
         order: 1;
+
         img {
             width: 150px;
         }
+
+        @media (max-width: 1000px) {
+            width: 100%;
+            order: 2;
+        }
     }
 
-    &.info-on-right {
-        display: flex;
-        justify-content: right;
-        .band-first-half {
-            order: 2;
-            justify-content: left;
-            .info {
-                order: 1;
-                text-align: left;
-            }
-            .date {
-                order: 0;
-                &:before {
-                    left: -35px;
+    @media (min-width: 1000px) {
+        &.info-on-right {
+            display: flex;
+            justify-content: right;
+
+            .band-first-half {
+                order: 2;
+                justify-content: left;
+
+                .info {
+                    order: 1;
+                    text-align: left;
+                }
+
+                .date {
+                    order: 0;
+
+                    &::before {
+                        left: -35px;
+                    }
                 }
             }
         }
