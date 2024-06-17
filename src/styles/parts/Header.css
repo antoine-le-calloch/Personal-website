@@ -38,13 +38,13 @@
                 margin-left: 2rem;
                 .react-switch-bg {
                     transition-duration: 2s !important;
-                    background-color: var(--primary) !important;
+                    background-color: var(--secondary) !important;
                     div{
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         svg{
-                            color: var(--secondary) !important;
+                            color: var(--primary) !important;
                         }
                     }
                 }
