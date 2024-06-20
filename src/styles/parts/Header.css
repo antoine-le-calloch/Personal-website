@@ -78,6 +78,7 @@
                 height: 30px;
                 width: 40px;
                 z-index: 1;
+                cursor: pointer;
 
                 span {
                     background-color: var(--header);
