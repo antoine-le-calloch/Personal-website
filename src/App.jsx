@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './parts/Header';
 import Footer from "./parts/Footer";
 import Home from './pages/Home';
@@ -8,11 +8,13 @@ import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
 import AOS from 'aos';
 
 function App() {
+    /* Initialize AOS */
     useEffect(() => {
         AOS.init({
             duration: 2000
         });
     }, [])
+
     return (
         <Router>
             <Header />
