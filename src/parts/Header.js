@@ -44,7 +44,9 @@ const Header = () => {
                 <Link className="logo" to="/">
                         <img src="/logo/logo_ALC.png" alt="Logo ALC"/>
                 </Link>
-                <button ref={menuRef} className="open-menu-mobile" onClick={() => setOpenMenu(!openMenu)}>
+                <button ref={menuRef} className="open-menu-mobile"
+                        onClick={() => setOpenMenu(!openMenu)}
+                        onMouseDown={event => event.stopPropagation()}>
                     <span  className={openMenu ? "open" : ""}/>
                 </button>
                 <div ref={menuRef} className={"menu" + (openMenu ? " open" : "")}>
