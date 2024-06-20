@@ -3,10 +3,12 @@ import {FaArrowCircleDown} from 'react-icons/fa';
 import '../../styles/components/ScrollButton.css';
 
 const ScrollButton = () => {
-    const [isVisible, setIsVisible] = useState(window.scrollY === 0);
+    const [isVisible, setIsVisible] = useState(false);
     const scrollableItems = document.getElementsByClassName("scrollable");
 
     useEffect(() => {
+        setIsVisible(window.scrollY === 0);
+
         const handleScroll = () => {
             setIsVisible(window.scrollY === 0);
         };
