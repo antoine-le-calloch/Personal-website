@@ -27,9 +27,9 @@ const ExperiencesAndEducation = () => {
                 <Title title="Experience and education"
                        subtitle="My professional and academic background" />
             </div>
-            <div className="items">
-                <span className="arrow" data-aos="fade-in" data-aos-once={true}></span>
-                <span className="timeline" data-aos="fade-in" data-aos-once={true}></span>
+            <div className="items" data-aos="fade-in" data-aos-once={true}>
+                <span className="arrow"></span>
+                <span className="timeline"></span>
                 {items.map((item, index) => {
                     return (
                         <div key={item.title} className={"item " + (index % 2 ? "right":"")}>
