@@ -7,9 +7,13 @@ const ScrollButton = () => {
     const scrollableItems = document.getElementsByClassName("scrollable");
 
     useEffect(() => {
-        const handleScroll = () => {setIsVisible(window.scrollY === 0);};
+        const handleScroll = () => {
+            setIsVisible(window.scrollY === 0);
+        };
         window.addEventListener('scroll', handleScroll);
-        return () => {window.removeEventListener('scroll', handleScroll);};
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return scrollableItems.length > 0 && isVisible ? (
