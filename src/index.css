@@ -40,8 +40,9 @@ body {
 .app-body{
   padding: 0 1rem 5rem 1rem;
   @media (max-width: 650px) {
-    padding: 0 0.5rem 2rem 0.5rem;
+    padding: 0 0.5rem 5rem 0.5rem;
   }
+  min-height: 100vh;
 }
 
 h1{
