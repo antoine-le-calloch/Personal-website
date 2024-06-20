@@ -127,6 +127,7 @@
                 position: absolute;
                 height: 100vh;
                 visibility: hidden;
+                padding: 0 1rem;
                 opacity: 0;
                 right: 0;
                 top: 0;
