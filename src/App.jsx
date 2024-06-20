@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from "./components/generic/ScrollToTop";
 import Header from './parts/Header';
 import Footer from "./parts/Footer";
 import Home from './pages/Home';
@@ -17,6 +18,7 @@ function App() {
 
     return (
         <Router>
+            <ScrollToTop />
             <Header />
             <div className="app-body">
                 <Routes>
