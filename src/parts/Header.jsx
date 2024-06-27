@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
 import Switch from "react-switch";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import '../styles/parts/Header.css';
+import '../styles/parts/Header.scss';
 
 const Header = () => {
     const [checked, setChecked] = useState(false);
@@ -21,7 +21,6 @@ const Header = () => {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            console.log(menuRef)
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 setOpenMenu(false);
             }

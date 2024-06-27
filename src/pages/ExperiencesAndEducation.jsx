@@ -1,7 +1,7 @@
 import Title from "../components/generic/Title";
 import InfoBand from "../components/InfoBand";
 import {useEffect, useState} from "react";
-import '../styles/pages/ExperiencesAndEducation.css';
+import '../styles/pages/ExperiencesAndEducation.scss';
 
 const ExperiencesAndEducation = () => {
     const [experiences, setExperiences] = useState([]);

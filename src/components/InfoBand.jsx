@@ -1,4 +1,4 @@
-import '../styles/components/InfoBand.css';
+import '../styles/components/InfoBand.scss';
 import PropTypes from "prop-types";
 import parse from 'html-react-parser';
 import {useEffect, useState} from "react";

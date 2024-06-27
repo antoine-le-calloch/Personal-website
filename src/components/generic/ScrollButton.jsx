@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FaArrowCircleDown} from 'react-icons/fa';
-import '../../styles/components/ScrollButton.css';
+import '../../styles/components/ScrollButton.scss';
 
 const ScrollButton = () => {
     const [isVisible, setIsVisible] = useState(false);

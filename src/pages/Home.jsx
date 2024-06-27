@@ -1,4 +1,4 @@
-import '../styles/pages/Home.css';
+import '../styles/pages/Home.scss';
 import {useEffect, useState} from "react";
 import Text from "../components/generic/Text";
 

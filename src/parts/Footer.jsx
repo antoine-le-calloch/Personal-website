@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {BsLinkedin, BsGithub, BsEnvelope, BsTelephoneFill} from "react-icons/bs";
-import '../styles/parts/Footer.css';
+import '../styles/parts/Footer.scss';
 
 
 const Footer = () => {

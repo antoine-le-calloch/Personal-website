@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import parse from "html-react-parser";
 import Title from "../components/generic/Title";
-import '../styles/pages/Certifications.css';
+import '../styles/pages/Certifications.scss';
 
 const Certifications = () => {
     const [certifications, setCertifications] = useState(null);

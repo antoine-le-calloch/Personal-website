@@ -1,4 +1,4 @@
-import '../../styles/components/Title.css';
+import '../../styles/components/Title.scss';
 import ScrollButton from "./ScrollButton";
 import PropTypes from "prop-types";
 
