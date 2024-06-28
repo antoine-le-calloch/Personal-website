@@ -11,9 +11,9 @@ const Home = () => {
             .then(data => setIntroduction(data))
     }, []);
     return introduction && (
-        <div className="home" data-aos="fade-in">
-            <h1>{introduction.title}</h1>
-            <Text text={introduction.text}/>
+        <div className="home">
+            <h1 data-aos="fade-in">{introduction.title}</h1>
+            <Text data-aos="fade-in" text={introduction.text}/>
         </div>
     );
 };
