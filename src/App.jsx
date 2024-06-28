@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Certifications from "./pages/Certifications";
 import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
     useEffect(() => {
