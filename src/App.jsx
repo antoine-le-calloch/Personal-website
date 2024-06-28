@@ -9,7 +9,6 @@ import ExperiencesAndEducation from "./pages/ExperiencesAndEducation";
 import AOS from 'aos';
 
 function App() {
-    /* Initialize AOS */
     useEffect(() => {
         AOS.init({
             duration: 2000
