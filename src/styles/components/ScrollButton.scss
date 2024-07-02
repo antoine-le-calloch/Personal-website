@@ -1,6 +1,5 @@
 .scroll-button{
     position: absolute;
-    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 1s ease infinite;
@@ -17,7 +16,20 @@
 
 @keyframes bounce{
     from {bottom: 10px;}
-    50%  {bottom: 5px;}
+    50%  {bottom: 15px;}
     to   {bottom: 10px;}
 }
 
+@media (max-width: 650px) {
+    @keyframes bounce {
+        from {
+            bottom: 15%;
+        }
+        50% {
+            bottom: 16%;
+        }
+        to {
+            bottom: 15%;
+        }
+    }
+}
