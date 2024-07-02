@@ -30,8 +30,8 @@ const Certifications = () => {
                                 <a href={item.link} target="_blank" rel="noreferrer">
                                     {item.title}
                                 </a>
-                                <span>{parse(item.description)}</span>
-                                <em>{item.date}</em>
+                                <div className="mediumFont">{parse(item.description)}</div>
+                                <div className="italic date">{item.date}</div>
                             </div>
                         </div>
                     )

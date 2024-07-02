@@ -3,9 +3,9 @@ import '../../styles/components/Text.scss';
 const Text = ({text}) => {
     return (
         <div className="text" data-aos="fade-in">
-            <span>
+            <div className="mediumFont">
                 {text}
-            </span>
+            </div>
         </div>
     );
 };

@@ -6,7 +6,7 @@ const Title = ({title, subtitle}) => {
     return (
         <div className="title" data-aos="fade-in">
             <h1>{title}</h1>
-            <span>{subtitle}</span>
+            <div className="mediumFont">{subtitle}</div>
             <ScrollButton/>
         </div>
     );

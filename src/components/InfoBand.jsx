@@ -30,13 +30,16 @@ const InfoBand = ({data, position}) => {
             <div className="band-first-half" data-aos={getFade(!position,!isMobile)}>
                 <div className="info">
                     <h2>{data.title}</h2>
-                    <p>{parse(data.description)}</p><br/>
-                    <em>{`${start.toLocaleDateString('en-GB', options)} - ${end.toLocaleDateString('en-GB', options)}`}</em><br/>
-                    <em>{data.institution}</em><br/>
-                    <em>{data.location}</em>
+                    <div className="description">{parse(data.description)}</div>
+                    <div className="italic">{`${start.toLocaleDateString('en-GB', options)} - ${end.toLocaleDateString('en-GB', options)}`}</div>
+                    <div className="italic">{data.institution}</div>
+                    <div className="italic">{data.location}</div>
+                    {data.type && (
+                        <div className="italic">{data.type}</div>
+                    )}
                 </div>
                 <div className="date">
-                    <div>{start.toLocaleDateString('en-US', {year: 'numeric', month: 'long'})}</div>
+                <div>{start.toLocaleDateString('en-US', {year: 'numeric', month: 'long'})}</div>
                 </div>
             </div>
             <div className="band-second-half"  data-aos={getFade(position,!isMobile)}>
