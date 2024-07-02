@@ -24,6 +24,10 @@
             @media (max-width: 1000px) {
                 text-align: center;
             }
+            
+            .description {
+                margin-bottom: 1rem;
+            }
 
             a {
                 &::after {
