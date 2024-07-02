@@ -61,32 +61,25 @@ h2{
   margin: 0;
 }
 
-span{
-  font-size: 1.2rem;
-  @media (max-width: 650px) {
-    font-size: 1rem;
-  }
-}
-
-p{
-  font-size: 1rem;
-  margin: 0;
-  @media (max-width: 650px) {
-    font-size: 0.8rem;
-  }
-}
-
-em{
-  font-size: 1rem;
-  margin: 0;
-  @media (max-width: 650px) {
-    font-size: 0.8rem;
-  }
-}
-
 a{
   text-decoration: none;
   white-space: nowrap;
   color: var(--link);
   position: relative;
+}
+
+.italic{
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0;
+  @media (max-width: 650px) {
+    font-size: 0.8rem;
+  }
+}
+
+.mediumFont{
+  font-size: 1.2rem;
+  @media (max-width: 650px) {
+    font-size: 1rem;
+  }
 }
