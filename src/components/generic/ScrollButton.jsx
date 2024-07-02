@@ -19,7 +19,7 @@ const ScrollButton = () => {
     
     const handleScroll = () => {
         window.scrollTo({
-            top: window.innerHeight,
+            top: window.innerHeight * 0.8,
             behavior: "smooth"
         });
     };
