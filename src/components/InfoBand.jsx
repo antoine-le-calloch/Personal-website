@@ -25,7 +25,7 @@ const InfoBand = ({data, position}) => {
 
     return (
         <div
-            className={`scrollable info-band info-on-${position ? "right":"left"}`}
+            className={`info-band info-on-${position ? "right":"left"}`}
             data-aos={getFade(position,isMobile)}>
             <div className="band-first-half" data-aos={getFade(!position,!isMobile)}>
                 <div className="info">

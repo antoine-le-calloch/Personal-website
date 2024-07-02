@@ -32,7 +32,7 @@ const ExperiencesAndEducation = () => {
                 <span className="timeline"></span>
                 {items.map((item, index) => {
                     return (
-                        <div key={item.title} className={"item " + (index % 2 ? "right":"")}>
+                        <div key={item.title} className={"item scrollable" + (index % 2 ? "right":"")}>
                             <InfoBand data={item} position={index % 2}/>
                         </div>
                     )})}
