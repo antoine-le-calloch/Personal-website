@@ -4,23 +4,29 @@ import '../../styles/components/ScrollButton.scss';
 
 const ScrollButton = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const scrollableItems = document.getElementsByClassName("scrollable");
+
 
     useEffect(() => {
-        setIsVisible(window.scrollY === 0);
-
-        const handleScroll = () => {
+        setIsVisible(window.scrollY === 0)
+        const updateVisibility = () => {
             setIsVisible(window.scrollY === 0);
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', updateVisibility);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', updateVisibility);
         };
     }, []);
+    
+    const handleScroll = () => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth"
+        });
+    };
 
-    return scrollableItems.length > 0 && isVisible ? (
+    return isVisible ? (
         <div className="scroll-button">
-            <button onClick={() => scrollableItems[0].scrollIntoView({block: "center", behavior: "smooth"})}>
+            <button onClick={() => handleScroll()}>
                 <FaArrowCircleDown
                     className="icon-position icon-style"/>
             </button>
