@@ -1,8 +1,51 @@
 .home {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+    .title{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills {
+        padding: 0 20%;
+        .skill {
+            text-align: center;
+            margin-bottom: 4rem;
+            h2{
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+            .schema {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                gap: 2rem;
+                height: 200px;
+
+                div {
+                    opacity: 0;
+                    animation: slideIn 2s forwards;
+                    transition: opacity 2s;
+                    transform-origin: bottom;
+                    width: 100%;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
