@@ -25,7 +25,7 @@ const Home = () => {
                             <div key={language.name} className="language"
                                  style={{
                                      height: `${language.level}%`,
-                                     background: introduction.colors[index],
+                                     background: introduction.skills.languages_colors[index],
                                      animationDelay: `${index * 0.5}s`
                                  }}>
                                 {language.name}
@@ -40,7 +40,7 @@ const Home = () => {
                             <div key={framework.name} className="framework"
                                  style={{
                                      height: `${framework.level}%`,
-                                     background: introduction.colors[index],
+                                     background: introduction.skills.frameworks_colors[index],
                                      animationDelay: `${index * 0.5}s`
                                  }}>
                                 {framework.name}
@@ -55,7 +55,7 @@ const Home = () => {
                             <div key={tool.name} className="tool"
                                  style={{
                                      height: `${tool.level}%`,
-                                     background: introduction.colors[index],
+                                     background: introduction.skills.development_tools_colors[index],
                                      animationDelay: `${index * 0.5}s`
                                  }}>
                                 {tool.name}
