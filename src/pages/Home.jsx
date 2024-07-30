@@ -1,6 +1,7 @@
 import '../styles/pages/Home.scss';
 import {useEffect, useState} from "react";
 import Text from "../components/generic/Text";
+import AnimateOnScroll from "../components/generic/AnimateOnScroll";
 
 const Home = () => {
     const [introduction, setIntroduction] = useState(null);
@@ -19,9 +20,9 @@ const Home = () => {
             <div className="skills">
                 <div className="skill languages">
                     <h2>Computer languages</h2>
-                    <div className="schema">
+                    <AnimateOnScroll className="schema">
                         {introduction.skills.languages.map((language, index) => (
-                            <div key={language.name} className="language" 
+                            <div key={language.name} className="language"
                                  style={{
                                      height: `${language.level}%`,
                                      background: introduction.colors[index],
@@ -30,11 +31,11 @@ const Home = () => {
                                 {language.name}
                             </div>
                         ))}
-                    </div>
+                    </AnimateOnScroll>
                 </div>
                 <div className="skill frameworks">
                     <h2>Frameworks</h2>
-                    <div className="schema">
+                    <AnimateOnScroll className="schema">
                         {introduction.skills.frameworks.map((framework, index) => (
                             <div key={framework.name} className="framework"
                                  style={{
@@ -45,11 +46,11 @@ const Home = () => {
                                 {framework.name}
                             </div>
                         ))}
-                    </div>
+                    </AnimateOnScroll>
                 </div>
                 <div className="skill development-tools">
                     <h2>Development tools</h2>
-                    <div className="schema">
+                    <AnimateOnScroll className="schema">
                         {introduction.skills.development_tools.map((tool, index) => (
                             <div key={tool.name} className="tool"
                                  style={{
@@ -60,7 +61,7 @@ const Home = () => {
                                 {tool.name}
                             </div>
                         ))}
-                    </div>
+                    </AnimateOnScroll>
                 </div>
             </div>
         </div>

@@ -23,9 +23,14 @@
                 gap: 2rem;
                 height: 200px;
 
+                &.show {
+                    .language, .tool, .framework {
+                        animation: slideIn 2s forwards;
+                    }
+                }
+
                 .language, .tool, .framework {
                     opacity: 0;
-                    animation: slideIn 2s forwards;
                     transition: opacity 2s;
                     transform-origin: bottom;
                     width: 100%;
