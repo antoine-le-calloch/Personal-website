@@ -23,7 +23,7 @@
                 gap: 2rem;
                 height: 200px;
 
-                div {
+                .language, .tool, .framework {
                     opacity: 0;
                     animation: slideIn 2s forwards;
                     transition: opacity 2s;
