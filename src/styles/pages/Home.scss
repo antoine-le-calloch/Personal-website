@@ -8,7 +8,7 @@
         text-align: center;
     }
     .skills {
-        padding: 0 20%;
+        padding: 0 17%;
         .skill {
             text-align: center;
             margin-bottom: 4rem;
@@ -24,17 +24,20 @@
                 height: 200px;
 
                 &.show {
-                    .language, .tool, .framework {
+                    .language, .framework, .development-tool, .security-tool {
                         animation: slideIn 2s forwards;
                     }
                 }
 
-                .language, .tool, .framework {
+                .language, .framework, .development-tool, .security-tool {
                     opacity: 0;
                     transition: opacity 2s;
                     transform-origin: bottom;
                     width: 100%;
+                    color: var(--primary-base);
                     font-weight: bold;
+                    font-size: 0.9rem;
+                    padding: 0.3rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;

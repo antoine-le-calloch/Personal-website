@@ -52,10 +52,25 @@ const Home = () => {
                     <h2>Development tools</h2>
                     <AnimateOnScroll className="schema">
                         {introduction.skills.development_tools.map((tool, index) => (
-                            <div key={tool.name} className="tool"
+                            <div key={tool.name} className="development-tool"
                                  style={{
                                      height: `${tool.level}%`,
                                      background: introduction.skills.development_tools_colors[index],
+                                     animationDelay: `${index * 0.5}s`
+                                 }}>
+                                {tool.name}
+                            </div>
+                        ))}
+                    </AnimateOnScroll>
+                </div>
+                <div className="skill security-tools">
+                    <h2>Security tools</h2>
+                    <AnimateOnScroll className="schema">
+                        {introduction.skills.security_tools.map((tool, index) => (
+                            <div key={tool.name} className="security-tool"
+                                 style={{
+                                     height: `${tool.level}%`,
+                                     background: introduction.skills.security_tools_colors[index],
                                      animationDelay: `${index * 0.5}s`
                                  }}>
                                 {tool.name}
