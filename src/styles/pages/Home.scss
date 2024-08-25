@@ -8,7 +8,10 @@
         text-align: center;
     }
     .skills {
-        padding: 0 17%;
+        @media (min-width: 900px) {
+            margin: 0 auto;
+            width: 890px;
+        }
         .skill {
             text-align: center;
             margin-bottom: 4rem;
@@ -20,8 +23,20 @@
                 display: flex;
                 justify-content: center;
                 align-items: end;
-                gap: 2rem;
                 height: 200px;
+                gap: 1rem;
+                font-weight: bold;
+                font-size: 0.9rem;
+                @media (max-width: 700px) {
+                    height: 130px;
+                    font-size: 0.7rem;
+                    gap: 0.2rem;
+                }
+                @media (max-width: 500px) {
+                    height: 120px;
+                    font-size: 0.6rem;
+                    gap: 0.1rem;
+                }
 
                 &.show {
                     .language, .framework, .development-tool, .security-tool {
@@ -30,17 +45,18 @@
                 }
 
                 .language, .framework, .development-tool, .security-tool {
-                    opacity: 0;
-                    transition: opacity 2s;
-                    transform-origin: bottom;
-                    width: 100%;
-                    color: var(--primary-base);
-                    font-weight: bold;
-                    font-size: 0.9rem;
-                    padding: 0.3rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    width: 100%;
+                    opacity: 0;
+                    transition: opacity 2s;
+                    transform-origin: bottom;
+                    color: var(--primary-base);
+                    padding: 0.3rem;
+                    @media (max-width: 500px) {
+                        padding: 0.1rem;
+                    }
                 }
             }
         }
