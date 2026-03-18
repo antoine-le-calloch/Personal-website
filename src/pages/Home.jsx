@@ -22,7 +22,7 @@ const Home = () => {
                     <h2>Computer languages</h2>
                     <AnimateOnScroll className="schema">
                         {introduction.skills.languages.map((language, index) => (
-                            <div key={language.name} className="language"
+                            <div key={language.name} className="skill-candle"
                                  style={{
                                      height: `${language.level}%`,
                                      background: introduction.skills.languages_colors[index],
@@ -37,7 +37,7 @@ const Home = () => {
                     <h2>Frameworks</h2>
                     <AnimateOnScroll className="schema">
                         {introduction.skills.frameworks.map((framework, index) => (
-                            <div key={framework.name} className="framework"
+                            <div key={framework.name} className="skill-candle"
                                  style={{
                                      height: `${framework.level}%`,
                                      background: introduction.skills.frameworks_colors[index],
@@ -52,7 +52,7 @@ const Home = () => {
                     <h2>Development tools</h2>
                     <AnimateOnScroll className="schema">
                         {introduction.skills.development_tools.map((tool, index) => (
-                            <div key={tool.name} className="development-tool"
+                            <div key={tool.name} className="skill-candle"
                                  style={{
                                      height: `${tool.level}%`,
                                      background: introduction.skills.development_tools_colors[index],
@@ -63,11 +63,26 @@ const Home = () => {
                         ))}
                     </AnimateOnScroll>
                 </div>
+                <div className="skill infrastructure">
+                    <h2>Infrastructure</h2>
+                    <AnimateOnScroll className="schema">
+                        {introduction.skills.infrastructure.map((infra, index) => (
+                          <div key={infra.name} className="skill-candle"
+                               style={{
+                                   height: `${infra.level}%`,
+                                   background: introduction.skills.infrastructure_colors[index],
+                                   animationDelay: `${index * 0.5}s`
+                               }}>
+                              {infra.name}
+                          </div>
+                        ))}
+                    </AnimateOnScroll>
+                </div>
                 <div className="skill security-tools">
                     <h2>Security tools</h2>
                     <AnimateOnScroll className="schema">
                         {introduction.skills.security_tools.map((tool, index) => (
-                            <div key={tool.name} className="security-tool"
+                            <div key={tool.name} className="skill-candle"
                                  style={{
                                      height: `${tool.level}%`,
                                      background: introduction.skills.security_tools_colors[index],

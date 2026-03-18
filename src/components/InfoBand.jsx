@@ -7,7 +7,7 @@ const InfoBand = ({data, position}) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
     let options = { day: 'numeric', month: 'long', year: 'numeric' };
     const start = new Date(data.start);
-    const end = new Date(data.end);
+    const end = data.end && new Date(data.end);
 
     const getFade = (position, display) => {
         return display ? `fade-${position ? "right":"left"}` : '';
@@ -31,7 +31,7 @@ const InfoBand = ({data, position}) => {
                 <div className="info">
                     <h2>{data.title}</h2>
                     <div className="description smallFont">{parse(data.description)}</div>
-                    <div className="italic">{`${start.toLocaleDateString('en-GB', options)} - ${end.toLocaleDateString('en-GB', options)}`}</div>
+                    <div className="italic">{`${start.toLocaleDateString('en-US', options)} - ${end ? end.toLocaleDateString('en-US', options) : 'Present'}`}</div>
                     <div className="italic">{data.institution}</div>
                     <div className="italic">{data.location}</div>
                     {data.type && (

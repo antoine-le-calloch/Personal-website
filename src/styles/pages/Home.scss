@@ -39,12 +39,12 @@
                 }
 
                 &.show {
-                    .language, .framework, .development-tool, .security-tool {
+                    .skill-candle {
                         animation: slideIn 2s forwards;
                     }
                 }
 
-                .language, .framework, .development-tool, .security-tool {
+                .skill-candle {
                     display: flex;
                     justify-content: center;
                     align-items: center;
