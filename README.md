@@ -32,7 +32,7 @@ Make sure you have Node.js and npm installed on your machine.
 Once the installation is complete, you can start the website:
 
 ```bash
-npm start
+npm run dev
 ```
 
 This command will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
