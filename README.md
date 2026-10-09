@@ -42,5 +42,6 @@ This command will run the app in development mode. Open [http://localhost:3000](
 This website is built using the following technologies:
 
 - **React**: Frontend JavaScript library for building user interfaces.
-- **HTML/CSS**: For markup and styling.
+- **Vite**: Build tool and dev server.
+- **HTML/SCSS**: For markup and styling.
 - **npm**: Package manager for Node.js packages.
